@@ -38,7 +38,7 @@ Serve un VPS con almeno 2 GB di RAM; 4 GB sono più comodi, perché sullo stesso
 
 Il modo previsto è un repository Git con questa cartella, collegato a Coolify come applicazione **Docker Compose**.
 
-1. Crea un progetto Coolify e una risorsa Docker Compose che punta a questo repository. Il file è `docker-compose.yml` nella radice.
+1. Crea un progetto Coolify e una risorsa Docker Compose che punta a questo repository. Il file è `/docker-compose.yaml` nella radice.
 2. Prima di avviare, assegna a `freshrss` il dominio pubblico, ad esempio `https://notizie.tuodominio.it`. Coolify riempie così `SERVICE_URL_FRESHRSS_80`, che diventa l'indirizzo dell'installazione. Va impostato prima del primo deploy: FreshRSS lo registra solo in quel momento.
 3. Imposta le variabili d'ambiente. Le password vanno scelte senza spazi, virgolette o il simbolo `$`.
 
@@ -74,7 +74,7 @@ Docker Desktop o Docker Engine, dalla cartella del progetto:
 
 ```powershell
 copy .env.example .env
-docker compose --env-file .env -f docker-compose.yml -f docker-compose.local.yml up -d --build
+docker compose --env-file .env -f docker-compose.yaml -f docker-compose.local.yml up -d --build
 ```
 
 Il sito risponde su `http://localhost:8080`. Il file `docker-compose.local.yml` non va usato su Coolify.
