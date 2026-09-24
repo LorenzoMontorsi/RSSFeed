@@ -63,9 +63,8 @@ fi
 unset FRESHRSS_INSTALL
 unset FRESHRSS_USER
 
-if [ "$#" -eq 0 ]; then
-	set -- sh -c '([ -z "$CRON_MIN" ] || crond -d 6) && exec httpd -D FOREGROUND'
-fi
-
+# Coolify esegue il comando con bash e un PATH senza /usr/sbin.
+# `crond` non viene trovato, il `&&` salta Apache e il container esce.
 echo "FreshRSS: avvio del server web"
-exec "$root/Docker/entrypoint.sh" "$@"
+exec "$root/Docker/entrypoint.sh" \
+	/bin/sh -c '/usr/sbin/crond -d 6 || true; exec /usr/sbin/httpd -D FOREGROUND'

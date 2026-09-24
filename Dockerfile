@@ -10,5 +10,5 @@ RUN sed -i 's/\r$//' /entrypoint-wrapper.sh && chmod +x /entrypoint-wrapper.sh
 
 ENTRYPOINT ["/entrypoint-wrapper.sh"]
 # Impostare ENTRYPOINT azzera il CMD dell'immagine ufficiale.
-# Senza questo comando il container termina dopo l'installazione e Coolify lo riavvia.
-CMD ([ -z "$CRON_MIN" ] || crond -d 6) && exec httpd -D FOREGROUND
+# Il percorso assoluto evita il PATH ridotto con cui Coolify lancia il comando.
+CMD /usr/sbin/crond -d 6 || true; exec /usr/sbin/httpd -D FOREGROUND
