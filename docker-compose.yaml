@@ -31,25 +31,6 @@ services:
       DB_BASE: ${DB_BASE:-freshrss}
       DB_USER: ${DB_USER:-freshrss}
       DB_PASSWORD: ${SERVICE_PASSWORD_DB}
-      # $$ resta una variabile del container: la espande l'entrypoint ufficiale.
-      # I parametri di installazione e utente valgono solo al primo avvio.
-      FRESHRSS_INSTALL: |-
-        --api-enabled
-        --base-url $$BASE_URL
-        --db-base $$DB_BASE
-        --db-host $$DB_HOST
-        --db-password $$DB_PASSWORD
-        --db-type pgsql
-        --db-user $$DB_USER
-        --default-user admin
-        --language it
-      FRESHRSS_USER: |-
-        --api-password $$ADMIN_API_PASSWORD
-        --email $$ADMIN_EMAIL
-        --language it
-        --no-default-feeds
-        --password $$ADMIN_PASSWORD
-        --user admin
     volumes:
       - freshrss-data:/var/www/FreshRSS/data
       - freshrss-extensions:/var/www/FreshRSS/extensions
