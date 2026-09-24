@@ -9,6 +9,5 @@ COPY docker/entrypoint-wrapper.sh /entrypoint-wrapper.sh
 RUN sed -i 's/\r$//' /entrypoint-wrapper.sh && chmod +x /entrypoint-wrapper.sh
 
 ENTRYPOINT ["/entrypoint-wrapper.sh"]
-# Impostare ENTRYPOINT azzera il CMD dell'immagine ufficiale.
-# Il percorso assoluto evita il PATH ridotto con cui Coolify lancia il comando.
-CMD /usr/sbin/crond -d 6 || true; exec /usr/sbin/httpd -D FOREGROUND
+# Impostare ENTRYPOINT azzera il CMD dell'immagine ufficiale Debian.
+CMD if [ -n "$CRON_MIN" ]; then /usr/sbin/cron || true; fi; . /etc/apache2/envvars && exec /usr/sbin/apache2 -D FOREGROUND

@@ -63,8 +63,7 @@ fi
 unset FRESHRSS_INSTALL
 unset FRESHRSS_USER
 
-# Coolify esegue il comando con bash e un PATH senza /usr/sbin.
-# `crond` non viene trovato, il `&&` salta Apache e il container esce.
+# L'immagine predefinita è Debian: cron e apache2, non crond e httpd.
 echo "FreshRSS: avvio del server web"
-exec "$root/Docker/entrypoint.sh" \
-	/bin/sh -c '/usr/sbin/crond -d 6 || true; exec /usr/sbin/httpd -D FOREGROUND'
+exec "$root/Docker/entrypoint.sh" /bin/sh -c \
+	'if [ -n "$CRON_MIN" ]; then /usr/sbin/cron || true; fi; . /etc/apache2/envvars && exec /usr/sbin/apache2 -D FOREGROUND'
