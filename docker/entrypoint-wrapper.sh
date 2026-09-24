@@ -63,4 +63,9 @@ fi
 unset FRESHRSS_INSTALL
 unset FRESHRSS_USER
 
+if [ "$#" -eq 0 ]; then
+	set -- sh -c '([ -z "$CRON_MIN" ] || crond -d 6) && exec httpd -D FOREGROUND'
+fi
+
+echo "FreshRSS: avvio del server web"
 exec "$root/Docker/entrypoint.sh" "$@"
