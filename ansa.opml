@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>ANSA.it - Tutti i feed RSS</title>
+  </head>
+  <body>
+    <outline text="ANSA - Rubriche" title="ANSA - Rubriche">
+      <outline type="rss" text="ANSA - Homepage" title="ANSA - Homepage" xmlUrl="https://www.ansa.it/sito/ansait_rss.xml" htmlUrl="https://www.ansa.it/"/>
+      <outline type="rss" text="ANSA - Ultime Notizie (Top News)" title="ANSA - Ultime Notizie (Top News)" xmlUrl="https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml" htmlUrl="https://www.ansa.it/sito/notizie/topnews/index.shtml"/>
+      <outline type="rss" text="ANSA - Cronaca" title="ANSA - Cronaca" xmlUrl="https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml" htmlUrl="https://www.ansa.it/sito/notizie/cronaca/cronaca.shtml"/>
+      <outline type="rss" text="ANSA - Politica" title="ANSA - Politica" xmlUrl="https://www.ansa.it/sito/notizie/politica/politica_rss.xml" htmlUrl="https://www.ansa.it/sito/notizie/politica/politica.shtml"/>
+      <outline type="rss" text="ANSA - Mondo" title="ANSA - Mondo" xmlUrl="https://www.ansa.it/sito/notizie/mondo/mondo_rss.xml" htmlUrl="https://www.ansa.it/sito/notizie/mondo/mondo.shtml"/>
+      <outline type="rss" text="ANSA - Economia" title="ANSA - Economia" xmlUrl="https://www.ansa.it/sito/notizie/economia/economia_rss.xml" htmlUrl="https://www.ansa.it/sito/notizie/economia/economia.shtml"/>
+      <outline type="rss" text="ANSA - Calcio" title="ANSA - Calcio" xmlUrl="https://www.ansa.it/sito/notizie/sport/calcio/calcio_rss.xml" htmlUrl="https://www.ansa.it/sito/notizie/sport/calcio/calcio.shtml"/>
+      <outline type="rss" text="ANSA - Sport" title="ANSA - Sport" xmlUrl="https://www.ansa.it/sito/notizie/sport/sport_rss.xml" htmlUrl="https://www.ansa.it/sito/notizie/sport/sport.shtml"/>
+      <outline type="rss" text="ANSA - Cinema" title="ANSA - Cinema" xmlUrl="https://www.ansa.it/sito/notizie/cultura/cinema/cinema_rss.xml" htmlUrl="https://www.ansa.it/sito/notizie/cultura/cinema/cinema.shtml"/>
+      <outline type="rss" text="ANSA - Cultura e Tendenze" title="ANSA - Cultura e Tendenze" xmlUrl="https://www.ansa.it/sito/notizie/cultura/cultura_rss.xml" htmlUrl="https://www.ansa.it/sito/notizie/cultura/cultura.shtml"/>
+      <outline type="rss" text="ANSA - Foto" title="ANSA - Foto" xmlUrl="https://www.ansa.it/sito/photogallery/foto_rss.xml" htmlUrl="https://www.ansa.it/sito/photogallery/foto.shtml"/>
+      <outline type="rss" text="ANSA - Video" title="ANSA - Video" xmlUrl="https://www.ansa.it/sito/videogallery/video_rss.xml" htmlUrl="https://www.ansa.it/sito/videogallery/video.shtml"/>
+    </outline>
+    <outline text="ANSA - Canali e Speciali" title="ANSA - Canali e Speciali">
+      <outline type="rss" text="ANSA - Motori" title="ANSA - Motori" xmlUrl="https://www.ansa.it/canale_motori/notizie/motori_rss.xml" htmlUrl="https://www.ansa.it/canale_motori/"/>
+      <outline type="rss" text="ANSA - Terra&amp;Gusto" title="ANSA - Terra&amp;Gusto" xmlUrl="https://www.ansa.it/canale_terraegusto/notizie/terraegusto_rss.xml" htmlUrl="https://www.ansa.it/canale_terraegusto/"/>
+      <outline type="rss" text="ANSA - Salute&amp;Benessere" title="ANSA - Salute&amp;Benessere" xmlUrl="https://www.ansa.it/canale_saluteebenessere/notizie/saluteebenessere_rss.xml" htmlUrl="https://www.ansa.it/canale_saluteebenessere/"/>
+      <outline type="rss" text="ANSA - Scienza" title="ANSA - Scienza" xmlUrl="https://www.ansa.it/canale_scienza_tecnica/notizie/scienzaetecnica_rss.xml" htmlUrl="https://www.ansa.it/canale_scienza/"/>
+      <outline type="rss" text="ANSA - Viaggi" title="ANSA - Viaggi" xmlUrl="https://www.ansa.it/canale_viaggi/notizie/viaggiart_rss.xml" htmlUrl="https://www.ansa.it/canale_viaggi/"/>
+      <outline type="rss" text="ANSA - Lifestyle" title="ANSA - Lifestyle" xmlUrl="https://www.ansa.it/canale_lifestyle/notizie/lifestyle_rss.xml" htmlUrl="https://www.ansa.it/canale_lifestyle/"/>
+      <outline type="rss" text="ANSA - Tecnologia" title="ANSA - Tecnologia" xmlUrl="https://www.ansa.it/canale_tecnologia/notizie/tecnologia_rss.xml" htmlUrl="https://www.ansa.it/canale_tecnologia/"/>
+      <outline type="rss" text="ANSA - Golf" title="ANSA - Golf" xmlUrl="https://www.ansa.it/golf/notizie/golf_rss.xml" htmlUrl="https://www.ansa.it/golf/"/>
+    </outline>
+    <outline text="ANSA - Regioni" title="ANSA - Regioni">
+      <outline type="rss" text="ANSA - Abruzzo" title="ANSA - Abruzzo" xmlUrl="https://www.ansa.it/abruzzo/notizie/abruzzo_rss.xml" htmlUrl="https://www.ansa.it/abruzzo/"/>
+      <outline type="rss" text="ANSA - Basilicata" title="ANSA - Basilicata" xmlUrl="https://www.ansa.it/basilicata/notizie/basilicata_rss.xml" htmlUrl="https://www.ansa.it/basilicata/"/>
+      <outline type="rss" text="ANSA - Calabria" title="ANSA - Calabria" xmlUrl="https://www.ansa.it/calabria/notizie/calabria_rss.xml" htmlUrl="https://www.ansa.it/calabria/"/>
+      <outline type="rss" text="ANSA - Campania" title="ANSA - Campania" xmlUrl="https://www.ansa.it/campania/notizie/campania_rss.xml" htmlUrl="https://www.ansa.it/campania/"/>
+      <outline type="rss" text="ANSA - Emilia Romagna" title="ANSA - Emilia Romagna" xmlUrl="https://www.ansa.it/emiliaromagna/notizie/emiliaromagna_rss.xml" htmlUrl="https://www.ansa.it/emiliaromagna/"/>
+      <outline type="rss" text="ANSA - Friuli Venezia Giulia" title="ANSA - Friuli Venezia Giulia" xmlUrl="https://www.ansa.it/friuliveneziagiulia/notizie/friuliveneziagiulia_rss.xml" htmlUrl="https://www.ansa.it/friuliveneziagiulia/"/>
+      <outline type="rss" text="ANSA - Lazio" title="ANSA - Lazio" xmlUrl="https://www.ansa.it/lazio/notizie/lazio_rss.xml" htmlUrl="https://www.ansa.it/lazio/"/>
+      <outline type="rss" text="ANSA - Liguria" title="ANSA - Liguria" xmlUrl="https://www.ansa.it/liguria/notizie/liguria_rss.xml" htmlUrl="https://www.ansa.it/liguria/"/>
+      <outline type="rss" text="ANSA - Lombardia" title="ANSA - Lombardia" xmlUrl="https://www.ansa.it/lombardia/notizie/lombardia_rss.xml" htmlUrl="https://www.ansa.it/lombardia/"/>
+      <outline type="rss" text="ANSA - Marche" title="ANSA - Marche" xmlUrl="https://www.ansa.it/marche/notizie/marche_rss.xml" htmlUrl="https://www.ansa.it/marche/"/>
+      <outline type="rss" text="ANSA - Molise" title="ANSA - Molise" xmlUrl="https://www.ansa.it/molise/notizie/molise_rss.xml" htmlUrl="https://www.ansa.it/molise/"/>
+      <outline type="rss" text="ANSA - Piemonte" title="ANSA - Piemonte" xmlUrl="https://www.ansa.it/piemonte/notizie/piemonte_rss.xml" htmlUrl="https://www.ansa.it/piemonte/"/>
+      <outline type="rss" text="ANSA - Puglia" title="ANSA - Puglia" xmlUrl="https://www.ansa.it/puglia/notizie/puglia_rss.xml" htmlUrl="https://www.ansa.it/puglia/"/>
+      <outline type="rss" text="ANSA - Sardegna" title="ANSA - Sardegna" xmlUrl="https://www.ansa.it/sardegna/notizie/sardegna_rss.xml" htmlUrl="https://www.ansa.it/sardegna/"/>
+      <outline type="rss" text="ANSA - Sicilia" title="ANSA - Sicilia" xmlUrl="https://www.ansa.it/sicilia/notizie/sicilia_rss.xml" htmlUrl="https://www.ansa.it/sicilia/"/>
+      <outline type="rss" text="ANSA - Toscana" title="ANSA - Toscana" xmlUrl="https://www.ansa.it/toscana/notizie/toscana_rss.xml" htmlUrl="https://www.ansa.it/toscana/"/>
+      <outline type="rss" text="ANSA - Trentino Alto Adige/Suedtirol" title="ANSA - Trentino Alto Adige/Suedtirol" xmlUrl="https://www.ansa.it/trentino/notizie/trentino_rss.xml" htmlUrl="https://www.ansa.it/trentino/"/>
+      <outline type="rss" text="ANSA - Umbria" title="ANSA - Umbria" xmlUrl="https://www.ansa.it/umbria/notizie/umbria_rss.xml" htmlUrl="https://www.ansa.it/umbria/"/>
+      <outline type="rss" text="ANSA - Valle d'Aosta" title="ANSA - Valle d'Aosta" xmlUrl="https://www.ansa.it/valledaosta/notizie/valledaosta_rss.xml" htmlUrl="https://www.ansa.it/valledaosta/"/>
+      <outline type="rss" text="ANSA - Veneto" title="ANSA - Veneto" xmlUrl="https://www.ansa.it/veneto/notizie/veneto_rss.xml" htmlUrl="https://www.ansa.it/veneto/"/>
+    </outline>
+    <outline text="ANSA - Siti internazionali" title="ANSA - Siti internazionali">
+      <outline type="rss" text="ANSA English" title="ANSA English" xmlUrl="https://www.ansa.it/english/news/english_nr_rss.xml" htmlUrl="https://www.ansa.it/english/"/>
+      <outline type="rss" text="ANSA Europa UE" title="ANSA Europa UE" xmlUrl="https://www.ansa.it/europa/notizie/rss.xml" htmlUrl="https://www.ansa.it/europa/"/>
+      <outline type="rss" text="ANSAMed" title="ANSAMed" xmlUrl="https://www.ansa.it/ansamed/it/rss.xml" htmlUrl="https://www.ansa.it/ansamed/it/"/>
+      <outline type="rss" text="ANSAMed (العربية)" title="ANSAMed (العربية)" xmlUrl="https://www.ansa.it/ansamednew/ar/notizie/ansamedar_nr_rss.xml" htmlUrl="https://www.ansa.it/ansamednew/ar/"/>
+      <outline type="rss" text="ANSA Nuova Europa (IT)" title="ANSA Nuova Europa (IT)" xmlUrl="https://www.ansa.it/nuova_europa/it/rss.xml" htmlUrl="https://www.ansa.it/nuova_europa/it/"/>
+      <outline type="rss" text="ANSA Nuova Europa (EN)" title="ANSA Nuova Europa (EN)" xmlUrl="https://www.ansa.it/nuova_europa/en/rss.xml" htmlUrl="https://www.ansa.it/nuova_europa/en/"/>
+      <outline type="rss" text="ANSA Brasil" title="ANSA Brasil" xmlUrl="https://www.ansa.it/brasil/noticias/ind_nr_rss.xml" htmlUrl="https://ansabrasil.com.br/"/>
+      <outline type="rss" text="ANSA America Latina" title="ANSA America Latina" xmlUrl="https://www.ansa.it/americalatina/noticia/al_nr_rss.xml" htmlUrl="https://www.ansalatina.com/"/>
+      <outline type="rss" text="ANSA China" title="ANSA China" xmlUrl="https://www.ansa.it/china/notizie/china_nr_rss.xml" htmlUrl="https://www.ansa.it/china/"/>
+    </outline>
+  </body>
+</opml>
