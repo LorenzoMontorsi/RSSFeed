@@ -1,0 +1,7 @@
+# Solo per una prova sul computer, non usarlo su Coolify.
+# Il proxy di Coolify non deve trovare una porta pubblicata sull'host.
+
+services:
+  freshrss:
+    ports:
+      - "127.0.0.1:8080:80"

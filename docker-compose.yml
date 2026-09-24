@@ -1,0 +1,85 @@
+# FreshRSS su Coolify (VPS Contabo).
+# Il proxy di Coolify pubblica il servizio: non esporre porte qui.
+# Prima del primo deploy assegna il dominio al servizio "freshrss",
+# così SERVICE_URL_FRESHRSS_80 diventa l'URL pubblico usato dall'installazione.
+
+services:
+  freshrss:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: freshrss-lingua:1.30.0
+    restart: unless-stopped
+    depends_on:
+      freshrss-db:
+        condition: service_healthy
+    logging:
+      options:
+        max-size: 10m
+    environment:
+      SERVICE_URL_FRESHRSS_80: ${SERVICE_URL_FRESHRSS_80:-http://localhost:8080}
+      TZ: ${TZ:-Europe/Rome}
+      CRON_MIN: ${CRON_MIN:-4,19,34,49}
+      FRESHRSS_ENV: production
+      # Reti Docker private usate dal proxy Traefik di Coolify.
+      TRUSTED_PROXY: ${TRUSTED_PROXY:-10.0.0.0/8 172.16.0.0/12 192.168.0.0/16}
+      BASE_URL: ${SERVICE_URL_FRESHRSS_80:-http://localhost:8080}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:?}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?}
+      ADMIN_API_PASSWORD: ${ADMIN_API_PASSWORD:?}
+      DB_HOST: freshrss-db
+      DB_BASE: ${DB_BASE:-freshrss}
+      DB_USER: ${DB_USER:-freshrss}
+      DB_PASSWORD: ${SERVICE_PASSWORD_DB}
+      # $$ resta una variabile del container: la espande l'entrypoint ufficiale.
+      # I parametri di installazione e utente valgono solo al primo avvio.
+      FRESHRSS_INSTALL: |-
+        --api-enabled
+        --base-url $$BASE_URL
+        --db-base $$DB_BASE
+        --db-host $$DB_HOST
+        --db-password $$DB_PASSWORD
+        --db-type pgsql
+        --db-user $$DB_USER
+        --default-user admin
+        --language it
+      FRESHRSS_USER: |-
+        --api-password $$ADMIN_API_PASSWORD
+        --email $$ADMIN_EMAIL
+        --language it
+        --no-default-feeds
+        --password $$ADMIN_PASSWORD
+        --user admin
+    volumes:
+      - freshrss-data:/var/www/FreshRSS/data
+      - freshrss-extensions:/var/www/FreshRSS/extensions
+    healthcheck:
+      test: ["CMD", "cli/health.php"]
+      interval: 30s
+      timeout: 10s
+      start_period: 90s
+      retries: 5
+
+  freshrss-db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: 10m
+    environment:
+      POSTGRES_DB: ${DB_BASE:-freshrss}
+      POSTGRES_USER: ${DB_USER:-freshrss}
+      POSTGRES_PASSWORD: ${SERVICE_PASSWORD_DB}
+    volumes:
+      - freshrss-postgresql:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 10s
+      timeout: 5s
+      start_period: 20s
+      retries: 10
+
+volumes:
+  freshrss-data:
+  freshrss-extensions:
+  freshrss-postgresql:

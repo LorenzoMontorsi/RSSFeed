@@ -1,0 +1,8 @@
+{
+	"name": "LanguageCatalog",
+	"author": "FreshRSS deploy",
+	"description": "Rileva la lingua degli articoli nuovi e li cataloga con un'etichetta.",
+	"version": "1.0.0",
+	"entrypoint": "LanguageCatalog",
+	"type": "system"
+}
