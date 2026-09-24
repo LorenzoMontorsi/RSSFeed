@@ -46,17 +46,27 @@ if [ -f "$data/config.php" ]; then
 	php "$bundle/enable-extension.php"
 fi
 
-# La cartella utente non esiste finché create-user non è andato a buon fine.
-# Il vecchio FRESHRSS_USER su più righe arrivava allo script senza --user.
+if [ -z "${ADMIN_PASSWORD:-}" ]; then
+	echo "FreshRSS: ADMIN_PASSWORD è vuota. Impostala in Coolify e rifai il deploy." >&2
+	exit 1
+fi
+
 if [ ! -d "$data/users/admin" ]; then
 	echo "FreshRSS: creo l'utente admin"
 	run_cli ./cli/create-user.php \
 		--user=admin \
 		--password="${ADMIN_PASSWORD}" \
-		--api-password="${ADMIN_API_PASSWORD}" \
-		--email="${ADMIN_EMAIL}" \
+		--email="${ADMIN_EMAIL:-}" \
+		--api-password="${ADMIN_API_PASSWORD:-}" \
 		--language=it \
 		--no-default-feeds
+else
+	echo "FreshRSS: aggiorno email e password di admin"
+	run_cli ./cli/update-user.php \
+		--user=admin \
+		--password="${ADMIN_PASSWORD}" \
+		--email="${ADMIN_EMAIL:-}" \
+		--api-password="${ADMIN_API_PASSWORD:-}"
 fi
 
 # L'entrypoint ufficiale non deve ritentare installazione e utente.
